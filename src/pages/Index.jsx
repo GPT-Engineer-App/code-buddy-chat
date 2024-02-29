@@ -26,8 +26,8 @@ const Index = () => {
   };
 
   return (
-    <Container maxW="container.md" py={5}>
-      <VStack spacing={5}>
+    <Container maxW="100%" height="100vh" py={5}>
+      <VStack spacing={5} minH="calc(100vh - 40px)">
         <Heading as="h1" size="2xl" textAlign="center">
           <FaRobot /> Code Buddy
         </Heading>
@@ -44,7 +44,7 @@ const Index = () => {
 
         <Textarea placeholder="Write your message..." value={message} onChange={(e) => setMessage(e.target.value)} mb={4} />
 
-        <Button colorScheme="blue" rightIcon={<FaRobot />} onClick={sendMessage}>
+        <Button colorScheme="blue" rightIcon={<FaRobot />} onClick={sendMessage} _active={{ boxShadow: "inset 0 0 15px rgba(0, 0, 0, 0.2)" }}>
           Send
         </Button>
       </VStack>
