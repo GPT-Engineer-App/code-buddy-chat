@@ -44,7 +44,7 @@ const Index = () => {
 
         <Textarea placeholder="Write your message..." value={message} onChange={(e) => setMessage(e.target.value)} mb={4} />
 
-        <Button colorScheme="blue" rightIcon={<FaRobot />} onClick={sendMessage} _active={{ boxShadow: "inset 0 0 15px rgba(0, 0, 0, 0.2)" }}>
+        <Button colorScheme="blue" rightIcon={<FaRobot />} onClick={sendMessage} shadow="md" _hover={{ bg: "blue.500" }} _active={{ boxShadow: "inset 0 0 15px rgba(0, 0, 0, 0.2)" }}>
           Send
         </Button>
       </VStack>
